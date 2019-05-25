@@ -29,6 +29,26 @@ namespace SERios2
                 ContentsEntry.Focus();
                 return;
             }
+            Note note = new Note
+            {
+                Contents = ContentsEntry.Text,
+                CreatedDate = CreatedDateDatePicker.Date,
+                ModifiedDate = ModifiedDateDatePicker.Date
+
+            };
+            using (var datos = new DataAccess())
+            {
+                datos.InsertNote(note);
+                datosListView.ItemsSource = datos.GetNotes();
+            }
+
+
+            ContentsEntry.Text = string.Empty;
+
+            CreatedDateDatePicker.Date = DateTime.Now;
+            ModifiedDateDatePicker.Date = DateTime.Now;
+
+
 
         }
     }

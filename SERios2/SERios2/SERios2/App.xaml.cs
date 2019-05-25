@@ -9,7 +9,7 @@ namespace SERios2
     {
         public App()
         {
-            InitializeComponent();
+           
 
             MainPage = new MainPage();
         }
