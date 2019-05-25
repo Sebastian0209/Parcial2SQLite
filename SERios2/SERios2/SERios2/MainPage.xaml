@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SERios2"
+             x:Class="SERios2.MainPage">
+
+    <StackLayout Padding="10" Spacing="10">
+
+        <Label Text="NOTES"
+               Font="24"
+               HorizontalOptions="Center"
+               TextColor="Black"/>
+        <Entry x:Name="ContentsEntry"
+               Placeholder="Contenido"
+               TextColor="Black"
+               />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Fecha"
+                  Font="18"
+                  VerticalOptions="Center"
+                  TextColor="Black"/>
+            <DatePicker x:Name="CreatedDateDatePicker"/>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Fecha"
+                  Font="18"
+                  VerticalOptions="Center"
+                  TextColor="Black"/>
+            <DatePicker x:Name="ModifiedDateDatePicker"/>
+
+        </StackLayout>
+
+        <Button    x:Name="nuevoButton"
+                       Text="Añadir"
+                       HorizontalOptions="Center"
+                       BackgroundColor="Blue"
+                       TextColor="White"/>
+
+        <ListView x:Name="datosListView"/>
+
+        
+    
+    </StackLayout>
+
+</ContentPage>
